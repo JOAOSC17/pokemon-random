@@ -1,0 +1,63 @@
+.card{
+    margin:0 auto;
+    width: 350px;
+    height: 480px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+.card__info{
+    z-index: 5;
+}
+.card__info-title{
+    font-size: 30px;
+    color: #ffffff;
+}
+.card__info-types{
+    font-size: 20px;
+    font-weight: 500;
+}
+.card__info-types > span{
+    margin-left: 10px;
+}
+.card__info-image{
+    margin: 0 auto;
+    max-width: 100%;
+}
+.card__glassphormism{
+    position: absolute;
+    z-index: -1;
+    font-weight: 900;
+    top: 20%;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.250);
+}
+@media screen and (max-width:400px){
+    .card{
+    width: 300px;
+    height: 400px;
+}
+}
+@media screen and (max-width:320px){
+    .card{
+    width: 250px;
+    height: 320px;
+}
+.card__info-title{
+    font-size: 25px;
+}
+.card__info-types{
+    font-size: 15px;
+}
+}
