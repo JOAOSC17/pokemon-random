@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 import not_found from '../../assets/not_found.png'
-export default function Card({pokemon, loading}) {
+export default function Card({pokemon, loading, background}) {
     return (
         <div className="card">
         {loading &&( <div className="card__loading">Carregando...</div> )}

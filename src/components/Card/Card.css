@@ -24,7 +24,12 @@
     font-weight: 500;
 }
 .card__info-types > span{
+    padding: 5px;
     margin-left: 10px;
+}
+.card__info-types > span:first-child{
+    padding: 5px;
+    margin-left: 0;
 }
 .card__info-image{
     margin: 0 auto;

@@ -13,11 +13,71 @@
 .app__container-logo{
   width: 400px;
   margin-bottom: 30px;
+  transition: all ease .8s;
 }
 .app__container-btn{
   padding: 10px 15px;
   background-color: #ffcc01;
   color: #fff;
-  border: none;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: 22px;
   outline: none;
+  transition: all ease .8s;
+
+}
+.app__container-logo.active{
+  width: 200px;
+  margin-bottom: 0px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.app__container-btn.active{
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+@media screen and (max-width:700px){
+  .app__container-btn.active{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+}
+@media screen and (max-width:500px){
+  .app__container-logo.active{
+    width: 150px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .app__container-btn.active{
+    position: absolute;
+    font-size: 15px;
+    padding:10px;
+    top: 20px;
+    right: 10px;
+  }
+}
+@media screen and (max-width:405px){
+  .app__container-logo{
+    width: 250px;
+  }
+}
+@media screen and (max-width:380px){
+  .app__container-btn{
+    font-size: 18px;
+  
+  }
+  .app__container-logo.active{
+    display: block;
+    width: 200px;
+    position: static;
+  }
+  .app__container-btn.active{
+    display: block;
+    position: static;
+    margin: 50px 0;
+  }
 }
