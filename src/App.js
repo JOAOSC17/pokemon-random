@@ -21,14 +21,19 @@ function App() {
     }
   }, [pokemon]);
   async function getPokemon(){
-    setLoading(true);
-    const randomId = Math.round(Math.random() * 890);
-    const url = `https://pokeapi.co/api/v2/pokemon/${randomId}`;
-    const response = await axios.get(url);
-    const data = response.data;
-    setIsFetch(true);
-    setLoading(false);
-    setPokemon(data);
+    try {
+      setLoading(true);
+      const randomId = Math.round(Math.random() * 890);
+      const url = `https://pokeapi.co/api/v2/pokemon/${randomId}`;
+      const response = await axios.get(url);
+      const data = response.data;
+      setIsFetch(true);
+      setLoading(false);
+      setPokemon(data);
+      
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <div className="App" style={background}>
